@@ -10,6 +10,6 @@
 #' a <- factor("character", "hits", "your", "eyeballs")
 #' b <- factor("but", "integer", "where it", "counts")
 #' fbind(a, b)
-fbind <- function(a, b) {
+fbind <- function(a, b){
     factor(c(as.character(a), as.character(b)))
 }
