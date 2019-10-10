@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.org/dragosmg/dmgr.svg?branch=master)](https://travis-ci.org/dragosmg/dmgr)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/dragosmg/dmgr?branch=master&svg=true)](https://ci.appveyor.com/project/dragosmg/dmgr)
 <!-- badges: end -->
 
 The goal of dmgr is to ...
