@@ -11,6 +11,8 @@ status](https://travis-ci.org/dragosmg/dmgr.svg?branch=master)](https://travis-c
 status](https://ci.appveyor.com/api/projects/status/github/dragosmg/dmgr?branch=master&svg=true)](https://ci.appveyor.com/project/dragosmg/dmgr)
 [![Codecov test
 coverage](https://codecov.io/gh/dragosmg/dmgr/branch/master/graph/badge.svg)](https://codecov.io/gh/dragosmg/dmgr?branch=master)
+[![R build
+status](https://github.com/dragosmg/dmgr/workflows/R-CMD-check/badge.svg)](https://github.com/dragosmg/dmgr)
 <!-- badges: end -->
 
 The goal of dmgr is to …
