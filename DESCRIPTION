@@ -2,7 +2,7 @@ Package: dmgr
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Dragoș",
+    person(given = "Drago<U+0219>",
            family = "Moldovan-Grünfeld",
            role = c("aut", "cre"),
            email = "dragos.mold@gmail.com")
@@ -15,4 +15,4 @@ Suggests:
     covr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
