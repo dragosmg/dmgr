@@ -8,5 +8,5 @@
 #' @examples
 #' add_one(2)
 add_one <- function(x) {
-  x + 1
+    x + 1
 }

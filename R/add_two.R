@@ -8,5 +8,5 @@
 #' @examples
 #' add_two(3)
 add_two <- function(x) {
-  x + 2
+    x + 2
 }
