@@ -6,4 +6,3 @@
 ^appveyor\.yml$
 ^codecov\.yml$
 ^\.github/workflows/R-CMD-check\.yaml$
-^\.github/workflows/pr-commands\.yaml$
