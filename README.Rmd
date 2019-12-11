@@ -22,11 +22,11 @@ knitr::opts_chunk$set(
 [![R build status](https://github.com/dragosmg/dmgr/workflows/R-CMD-check/badge.svg)](https://github.com/dragosmg/dmgr)
 <!-- badges: end -->
 
-The goal of dmgr is to ...
+The goal of {dmgr} is to ...
 
 ## Installation
 
-You can install the released version of dmgr from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of {dmgr} from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("dmgr")

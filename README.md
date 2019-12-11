@@ -15,11 +15,11 @@ coverage](https://codecov.io/gh/dragosmg/dmgr/branch/master/graph/badge.svg)](ht
 status](https://github.com/dragosmg/dmgr/workflows/R-CMD-check/badge.svg)](https://github.com/dragosmg/dmgr)
 <!-- badges: end -->
 
-The goal of dmgr is to …
+The goal of {dmgr} is to …
 
 ## Installation
 
-You can install the released version of dmgr from
+You can install the released version of {dmgr} from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
