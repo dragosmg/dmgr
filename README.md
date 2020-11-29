@@ -15,7 +15,7 @@ coverage](https://codecov.io/gh/dragosmg/dmgr/branch/master/graph/badge.svg)](ht
 status](https://github.com/dragosmg/dmgr/workflows/R-CMD-check/badge.svg)](https://github.com/dragosmg/dmgr)
 <!-- badges: end -->
 
-The goal of {dmgr} is to …
+The goal of {dmgr} is to … test stuff
 
 ## Installation
 
