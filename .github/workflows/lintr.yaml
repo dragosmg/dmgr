@@ -8,10 +8,10 @@ on:
       - main
       - master
 
-name: test-coverage
+name: lintr
 
 jobs:
-  test-coverage:
+  lintr:
     runs-on: macOS-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
