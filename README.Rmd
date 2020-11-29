@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 [![R build status](https://github.com/dragosmg/dmgr/workflows/R-CMD-check/badge.svg)](https://github.com/dragosmg/dmgr)
 <!-- badges: end -->
 
-The goal of {dmgr} is to ...
+The goal of {dmgr} is to ... test stuff
 
 ## Installation
 
