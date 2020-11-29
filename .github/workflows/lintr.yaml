@@ -44,6 +44,6 @@ jobs:
           install.packages("lintr")
         shell: Rscript {0}
 
-      - name: Test coverage
+      - name: Lint
         run: lintr::lint_package()
         shell: Rscript {0}
