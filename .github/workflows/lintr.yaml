@@ -3,6 +3,7 @@ on:
     branches:
       - main
       - master
+      - "**"
   pull_request:
     branches:
       - main
@@ -38,8 +39,15 @@ jobs:
         run: |
           install.packages(c("remotes"))
           remotes::install_deps(dependencies = TRUE)
+          remotes::install_cran("gh")
           remotes::install_cran("lintr")
         shell: Rscript {0}
+
+      - name: Extract PR number
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: |
+          print(PR_NUMBER)
 
       - name: Lint
         run: lintr::lint_package()
