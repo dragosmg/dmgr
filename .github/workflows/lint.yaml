@@ -8,10 +8,10 @@ on:
       - main
       - master
 
-name: lintr
+name: lint
 
 jobs:
-  lintr:
+  lint:
     runs-on: macOS-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
