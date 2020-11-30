@@ -54,6 +54,6 @@ jobs:
 
       - name: Lint
         run: |
-          lintr::lint("${FILES}")
+          lintr::lint('${{FILES}}')
           lintr::lint_package()
         shell: Rscript {0}
