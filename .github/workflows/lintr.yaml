@@ -43,11 +43,15 @@ jobs:
           remotes::install_cran("lintr")
         shell: Rscript {0}
 
+      - name: Add lintr options
+        run: cat("\noptions(lintr.linter_file = .lintr_new)\n", file = "~/.Rprofile", append = TRUE)
+        shell: Rscript {0}
+
       - name: Extract PR number
         env:
           PR_NUMBER: ${{ github.event.number }}
-        run: |
-          print(PR_NUMBER)
+        run: print(PR_NUMBER)
+        shell: Rscript {0}
 
       - name: Lint
         run: lintr::lint_package()
