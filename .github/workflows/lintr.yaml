@@ -49,7 +49,7 @@ jobs:
       - name: List files changed by this PR
         run: |
           URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${{ github.event.pull_request.number }}/files"
-          FILES=$(curl -s -X GET -G $URL | jq -r '.R | .filename | .Rmd')
+          FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
           echo $FILES
 
       - name: Lint
