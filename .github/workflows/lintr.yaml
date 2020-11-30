@@ -46,11 +46,11 @@ jobs:
         run: cat('\noptions(lintr.linter_file = ".lintr_new")\n', file = "~/.Rprofile", append = TRUE)
         shell: Rscript {0}
 
-      - name: Extract PR number
-        env:
-          PR_NUMBER: ${{ github.event.number }}
-        run: print(PR_NUMBER)
-        shell: Rscript {0}
+      - name: List files
+        run: |
+          URL="https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${{ github.event.pull_request.number }}/files"
+          FILES=$(curl -s -X GET -G $URL | jq -r '.[] | .filename')
+          echo $FILES
 
       - name: Lint
         run: lintr::lint_package()
