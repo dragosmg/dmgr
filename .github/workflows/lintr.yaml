@@ -39,7 +39,7 @@ jobs:
           install.packages(c("remotes"))
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("gh")
-          remotes::install_cran("lintr")
+          remotes::install_github("jimhester/lintr")
           remotes::install_cran("purrr")
           remotes::install_cran("fs")
         shell: Rscript {0}
@@ -48,9 +48,9 @@ jobs:
         run: cat('\noptions(lintr.linter_file = ".lintr_new")\n', file = "~/.Rprofile", append = TRUE)
         shell: Rscript {0}
 
-      - name: files using R
+      - name: Extract and lint files changed by this PR
         run: |
-          files <- gh::gh("GET https://api.github.com/repos/dragosmg/dmgr/pulls/${{ github.event.pull_request.number }}/files")
+          files <- gh::gh("GET https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${{ github.event.pull_request.number }}/files")
           changed_files <- purrr::map_chr(files, "filename")
           files_to_lint <- changed_files[grepl(".R$|.Rmd$", changed_files)]
           all_files <- fs::dir_ls(recurse = TRUE, glob = ".Rmd|.R")
