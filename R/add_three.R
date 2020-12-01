@@ -8,6 +8,6 @@
 #'
 #' @examples
 #' add_three(3)
-add_three <- function(x) {
-    x + 3
+add_three <- function(x){
+    x +3
 }

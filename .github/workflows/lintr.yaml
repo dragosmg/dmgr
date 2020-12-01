@@ -40,10 +40,18 @@ jobs:
           remotes::install_deps(dependencies = TRUE)
           remotes::install_cran("gh")
           remotes::install_cran("lintr")
+          remotes::install_cran("purrr")
+          remotes::install_cran("magrittr")
         shell: Rscript {0}
 
       - name: Add lintr options
         run: cat('\noptions(lintr.linter_file = ".lintr_new")\n', file = "~/.Rprofile", append = TRUE)
+        shell: Rscript {0}
+
+      - name: files using R
+        run: |
+          a <- gh::gh("GET https://api.github.com/repos/dragosmg/dmgr/pulls/${{ github.event.pull_request.number }}/files")
+          print(a)
         shell: Rscript {0}
 
       - name: List files changed by this PR
