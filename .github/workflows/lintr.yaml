@@ -50,7 +50,7 @@ jobs:
 
       - name: files using R
         run: |
-          a <- gh::gh("GET https://api.github.com/repos/dragosmg/dmgr/pulls/${{ github.event.pull_request.number }}/files") %>%
+          a <- gh::gh("GET https://api.github.com/repos/dragosmg/dmgr/pulls/${{ github.event.pull_request.number }}/files")
           purrr::map_chr(a, "filename")
         shell: Rscript {0}
 
