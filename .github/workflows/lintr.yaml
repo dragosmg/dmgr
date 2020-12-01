@@ -50,7 +50,7 @@ jobs:
 
       - name: Extract and lint files changed by this PR
         run: |
-          files <- gh::gh("GET https://api.github.com/repos/${GITHUB_REPOSITORY}/pulls/${{ github.event.pull_request.number }}/files")
+          files <- gh::gh("GET https://api.github.com/repos/${{ GITHUB_REPOSITORY }}/pulls/${{ github.event.pull_request.number }}/files")
           changed_files <- purrr::map_chr(files, "filename")
           files_to_lint <- changed_files[grepl(".R$|.Rmd$", changed_files)]
           all_files <- fs::dir_ls(recurse = TRUE, glob = ".Rmd|.R")
