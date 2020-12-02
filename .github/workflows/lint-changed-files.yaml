@@ -49,5 +49,5 @@ jobs:
           files <- gh::gh("GET https://api.github.com/repos/dragosmg/dmgr/pulls/${{ github.event.pull_request.number }}/files")
           changed_files <- purrr::map_chr(files, "filename")
           files_to_lint <- changed_files[grepl(".R$|.Rmd$", changed_files)]
-          for (f in files_to_lint) { print(lintr::lint(f))}
+          for (f in files_to_lint) { print(lintr::lint(f)) }
         shell: Rscript {0}
