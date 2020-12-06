@@ -7,3 +7,5 @@
 ^codecov\.yml$
 ^\.github/workflows/R-CMD-check\.yaml$
 ^\.github$
+.lintr
+.lintr_new

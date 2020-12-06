@@ -1,17 +1,13 @@
 on:
-  push:
-    branches:
-      - main
-      - master
   pull_request:
     branches:
       - main
       - master
 
-name: lintr
+name: lint-changed-files
 
 jobs:
-  lintr:
+  lint-changed-files:
     runs-on: macOS-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -38,9 +34,23 @@ jobs:
         run: |
           install.packages(c("remotes"))
           remotes::install_deps(dependencies = TRUE)
-          remotes::install_cran("lintr")
+          remotes::install_cran("gh")
+          remotes::install_github("jimhester/lintr")
+          remotes::install_cran("purrr")
         shell: Rscript {0}
 
-      - name: Lint
-        run: lintr::lint_package()
+      - name: Add lintr options
+        run: cat('\noptions(lintr.linter_file = ".lintr_new")\n', file = "~/.Rprofile", append = TRUE)
+        shell: Rscript {0}
+
+      - name: Install package
+        run: R CMD INSTALL .
+
+      - name: Extract and lint files changed by this PR
+        run: |
+          files <- gh::gh("GET https://api.github.com/repos/dragosmg/dmgr/pulls/${{ github.event.pull_request.number }}/files")
+          changed_files <- purrr::map_chr(files, "filename")
+          all_files <- list.files(recursive = TRUE)
+          exclusions_list <- as.list(setdiff(all_files, changed_files))
+          lintr::lint_package(exclusions = exclusions_list)
         shell: Rscript {0}

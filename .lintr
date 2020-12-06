@@ -1,3 +1,4 @@
 exclusions: list(
-  "tests" # TODO test
+  "tests", # TODO test
+  "R"
  )
