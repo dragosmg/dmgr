@@ -43,6 +43,9 @@ jobs:
         run: cat('\noptions(lintr.linter_file = ".lintr_new")\n', file = "~/.Rprofile", append = TRUE)
         shell: Rscript {0}
 
+      - name: Install package
+        run: R CMD INSTALL .
+
       - name: Extract and lint files changed by this PR
         run: |
           files <- gh::gh("GET https://api.github.com/repos/dragosmg/dmgr/pulls/${{ github.event.pull_request.number }}/files")
