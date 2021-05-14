@@ -7,6 +7,6 @@
 #'
 #' @examples
 #' add_four(1)
-add_four <- function(x){
+add_four <- function(x) {
     x+4
 }
