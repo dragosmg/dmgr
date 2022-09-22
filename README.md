@@ -5,14 +5,11 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.org/dragosmg/dmgr.svg?branch=master)](https://travis-ci.org/dragosmg/dmgr)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/dragosmg/dmgr?branch=master&svg=true)](https://ci.appveyor.com/project/dragosmg/dmgr)
 [![Codecov test
 coverage](https://codecov.io/gh/dragosmg/dmgr/branch/master/graph/badge.svg)](https://codecov.io/gh/dragosmg/dmgr?branch=master)
-[![R build
-status](https://github.com/dragosmg/dmgr/workflows/R-CMD-check/badge.svg)](https://github.com/dragosmg/dmgr)
+[![R-CMD-check](https://github.com/dragosmg/dmgr/workflows/R-CMD-check/badge.svg)](https://github.com/dragosmg/dmgr/actions)
 <!-- badges: end -->
 
 The goal of {dmgr} is to … test stuff
@@ -61,7 +58,7 @@ up-to-date.
 
 You can also embed plots, for example:
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
 In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub\!
+files, so they display on GitHub!
+
+test test-signed-commits

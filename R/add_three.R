@@ -1,4 +1,3 @@
-
 #' Add three
 #'
 #' @param x a numeric vector
